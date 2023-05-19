@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CloudDictionary</string>
+    <string name="dict_text">Dictionary</string>
+    <string name="text_hint"><font size="16">Enter your Text</font></string>
+    <string name="text_no_data">no Record Found</string>
+    <string name="entered_text_is">Entered Text is :</string>
+    <string name="phonotics_text">Phonotics</string>
+    <string name="meanings_text">Meanings</string>
+    <string name="check_internet">Please Check Your Internet Connection</string>
+
+</resources>

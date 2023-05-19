@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="10dp"
+        >
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <RelativeLayout
+               android:id="@+id/text_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="30dp"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               >
+
+               <TextView
+                   android:id="@+id/entered_Text"
+                   android:textColor="@color/black"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="18dp"
+                   android:gravity="left"
+                   android:text="@string/entered_text_is" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="18dp"
+                   android:layout_marginTop="3dp"
+                   android:fontFamily="@font/segoe_ui"
+                   android:layout_toRightOf="@+id/entered_Text"
+                   android:id="@+id/text_value"
+                   android:textColor="@color/black"
+                   />
+
+               <TextView
+                   android:id="@+id/count"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:gravity="center_vertical"
+                   android:text=""
+                   android:textSize="20dp" />
+
+           </RelativeLayout>
+
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/phoetics_card_layout"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="30dp"
+               android:gravity="center"
+               android:orientation="horizontal"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/text_layout"
+               app:cardBackgroundColor="@color/navy_blue"
+               >
+               <RelativeLayout
+                   android:id="@+id/phonetics_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginRight="30dp"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/text_layout"
+                   >
+
+
+                   <ImageView
+                       android:id="@+id/phoetics_img"
+                       android:layout_width="20sp"
+                       android:layout_height="20sp"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentBottom="true"
+                       />
+
+                   <TextView
+                       android:id="@+id/tv_gen_sett"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginLeft="50dp"
+                       android:layout_marginRight="120dp"
+                       android:fontFamily="@font/segoe_ui"
+                       android:gravity="center"
+                       android:text="phonetics"
+
+                       android:textColor="@color/white"
+                       android:textSize="15sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+
+                       app:layout_constraintTop_toTopOf="parent"
+
+                       />
+
+                   <ImageView
+                       android:id="@+id/img_gen_setting"
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginRight="20dp"
+                       android:src="@drawable/arrow_right"
+                       app:layout_constraintTop_toTopOf="@+id/tv_gen_sett" />
+
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+
+
+           <View
+               android:id="@+id/seperator_1"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="30dp"
+               android:background="@color/black"
+               android:visibility="visible"
+               app:layout_constraintTop_toBottomOf="@+id/phoetics_card_layout"
+               tools:ignore="MissingConstraints" />
+
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/meanings_card_layout"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="30dp"
+               android:gravity="center"
+               android:orientation="horizontal"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/seperator_1"
+               app:cardBackgroundColor="@color/navy_blue"
+               >
+               <RelativeLayout
+                   android:id="@+id/meanings_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginRight="30dp"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/text_layout"
+                   >
+
+
+                   <ImageView
+                       android:id="@+id/meanings_img"
+                       android:layout_width="20sp"
+                       android:layout_height="20sp"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentBottom="true"
+                       />
+
+                   <TextView
+                       android:id="@+id/tv_meanings"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginLeft="50dp"
+                       android:layout_marginRight="120dp"
+                       android:fontFamily="@font/segoe_ui"
+                       android:gravity="center"
+                       android:text="meanings"
+
+                       android:textColor="@color/white"
+                       android:textSize="15sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+
+                       app:layout_constraintTop_toTopOf="parent"
+
+                       />
+
+                   <ImageView
+                       android:id="@+id/img_meanings"
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginRight="20dp"
+                       android:src="@drawable/arrow_right"
+                       app:layout_constraintTop_toTopOf="@+id/tv_meanings" />
+
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+
+
+           <View
+               android:id="@+id/seperator_2"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="30dp"
+               android:background="@color/black"
+               android:visibility="visible"
+               app:layout_constraintTop_toBottomOf="@+id/meanings_card_layout"
+               tools:ignore="MissingConstraints" />
+
+           <!--
+              license-start
+           -->
+           <androidx.cardview.widget.CardView
+               android:id="@+id/license_card_layout"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="30dp"
+               android:gravity="center"
+               android:orientation="horizontal"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/seperator_2"
+               app:cardBackgroundColor="@color/navy_blue"
+               >
+               <RelativeLayout
+                   android:id="@+id/license_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginRight="30dp"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/text_layout"
+                   >
+
+
+                   <ImageView
+                       android:id="@+id/license_img"
+                       android:layout_width="20sp"
+                       android:layout_height="20sp"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentBottom="true"
+                       />
+
+                   <TextView
+                       android:id="@+id/tv_license"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginLeft="50dp"
+                       android:layout_marginRight="120dp"
+                       android:fontFamily="@font/segoe_ui"
+                       android:gravity="center"
+                       android:text="license"
+
+                       android:textColor="@color/white"
+                       android:textSize="15sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+
+                       app:layout_constraintTop_toTopOf="parent"
+
+                       />
+
+                   <ImageView
+                       android:id="@+id/img_license"
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginRight="20dp"
+                       android:src="@drawable/arrow_right"
+                       app:layout_constraintTop_toTopOf="@+id/tv_license" />
+
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/licence_info"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:visibility="gone"
+               app:layout_constraintTop_toBottomOf="@+id/license_card_layout">
+
+               <TextView
+                   android:id="@+id/tv_meanings_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="30dp"
+                   android:drawableStart="@drawable/arrow_right"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/black"
+                   android:ems="10"
+                   android:fontFamily="@font/segoe_ui"
+                   android:hint="Name "
+                   android:inputType="textPersonName"
+                   android:minHeight="48dp"
+                   android:gravity="left|center"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/tv_url_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="30dp"
+                   android:drawableStart="@drawable/arrow_right"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/black"
+                   android:ems="10"
+                   android:fontFamily="@font/segoe_ui"
+                   android:hint="url "
+                   android:inputType="textPersonName"
+                   android:minHeight="48dp"
+                   android:gravity="left|center"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/tv_meanings_name"
+                   />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+           <View
+               android:id="@+id/seperator_3"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="30dp"
+               android:background="@color/black"
+               android:visibility="visible"
+               app:layout_constraintTop_toBottomOf="@+id/licence_info"
+               tools:ignore="MissingConstraints" />
+           <!--
+          sourceUrl-end
+       -->
+
+           <!--
+              sourceUrl-start
+           -->
+           <androidx.cardview.widget.CardView
+               android:id="@+id/sourceUrl_card_layout"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="30dp"
+               android:gravity="center"
+               android:orientation="horizontal"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/seperator_3"
+               app:cardBackgroundColor="@color/navy_blue"
+               >
+               <RelativeLayout
+                   android:id="@+id/sourceUrl_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginRight="30dp"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/text_layout"
+                   >
+
+
+                   <ImageView
+                       android:id="@+id/sourceUrl_img"
+                       android:layout_width="20sp"
+                       android:layout_height="20sp"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentBottom="true"
+                       />
+
+                   <TextView
+                       android:id="@+id/tv_sourceUrl"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginLeft="50dp"
+                       android:layout_marginRight="120dp"
+                       android:fontFamily="@font/segoe_ui"
+                       android:gravity="center"
+                       android:text="sourceUrls"
+
+                       android:textColor="@color/white"
+                       android:textSize="15sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+
+                       app:layout_constraintTop_toTopOf="parent"
+
+                       />
+
+                   <ImageView
+                       android:id="@+id/img_sourceUrl"
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginRight="20dp"
+                       android:src="@drawable/arrow_right"
+                       app:layout_constraintTop_toTopOf="@+id/tv_sourceUrl" />
+
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/sourceUrl_info"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:visibility="gone"
+               app:layout_constraintTop_toBottomOf="@+id/sourceUrl_card_layout">
+
+
+
+               <TextView
+                   android:id="@+id/tv_sourceUrl_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="30dp"
+                   android:drawableStart="@drawable/arrow_right"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/black"
+                   android:ems="10"
+                   android:fontFamily="@font/segoe_ui"
+                   android:hint="url "
+                   android:inputType="textPersonName"
+                   android:minHeight="48dp"
+                   android:gravity="left|center"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+           <View
+               android:id="@+id/seperator_4"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="20dp"
+               android:background="@color/black"
+               android:visibility="visible"
+               app:layout_constraintTop_toBottomOf="@+id/sourceUrl_info"
+               tools:ignore="MissingConstraints" />
+           <!--
+              sourceUrl-end
+           -->
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

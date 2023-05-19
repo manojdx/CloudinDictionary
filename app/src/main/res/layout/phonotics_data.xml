@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+
+
+
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="10dp"
+        >
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="70dp"
+        android:layout_height="47dp"
+        android:padding="40dp"
+        android:src="@drawable/loud_speaker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:id="@+id/phono_url"
+        android:text="Click Here For WikiMedia"
+        android:textSize="20dp"
+        android:background="@color/navy_blue"
+        android:textColor="@color/white"
+        android:fontFamily="@font/segoe_ui"
+        android:padding="6dp"
+        android:layout_marginRight="5dp"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/phono_url"
+        android:id="@+id/phonotic_web_layout"
+        >
+
+        <WebView
+            android:id="@+id/phonotic_web"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:nestedScrollingEnabled="true"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/license_title"
+        android:text="License"
+        android:fontFamily="@font/segoe_ui"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/phonotic_web_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name :"
+        android:fontFamily="@font/segoe_ui"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toRightOf="@+id/license_title"
+        app:layout_constraintTop_toBottomOf="@+id/phonotic_web_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:id="@+id/license_name"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:fontFamily="@font/segoe_ui"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toRightOf="@+id/license_name"
+        app:layout_constraintTop_toBottomOf="@+id/phonotic_web_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:id="@+id/name_val"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewMore"
+            android:background="@color/navy_blue"
+            android:layout_marginTop="4dp"
+            android:text="View more"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:fontFamily="@font/segoe_ui"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:padding="7dp"
+            app:layout_constraintTop_toBottomOf="@+id/phonotic_web_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/license_title"
+        android:id="@+id/license_web_layout"
+        >
+
+        <WebView
+            android:id="@+id/license_web"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:overScrollMode="always"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical" />
+    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

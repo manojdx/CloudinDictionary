@@ -52,7 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public boolean onClose() {
                 dictionaryAdapter.updateData();
-                return false;
+                Toast.makeText(getApplicationContext(),"close",Toast.LENGTH_LONG).show();
+                return true;
             }
         });
         msearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -69,6 +70,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     } else {
                         Toast.makeText(getApplicationContext(), getString(R.string.check_internet), Toast.LENGTH_LONG).show();
                         ProgressDialog.dismissProgress();
+                    }
+                } else {
+                    if (newText.isEmpty()) {
+                        dictionaryAdapter.updateData();
+
                     }
                 }
                 return false;

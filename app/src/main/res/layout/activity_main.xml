@@ -59,6 +59,7 @@
            android:background="@drawable/rounded_bg"
            app:queryHint="Type your words here"
            app:iconifiedByDefault="false"
+
            >
            <requestFocus />
        </androidx.appcompat.widget.SearchView>

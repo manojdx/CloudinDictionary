@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -91,7 +92,18 @@ public class PhonoticsAdapter extends RecyclerView.Adapter<PhonoticsAdapter.Myvi
             viewMore = itemView.findViewById(R.id.viewMore);
             imageButton = itemView.findViewById(R.id.imageButton);
             phonotic_web = itemView.findViewById(R.id.phonotic_web);
+
+            WebSettings mWebSettings = phonotic_web.getSettings();
+            mWebSettings.setBuiltInZoomControls(true);
+            phonotic_web.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+            phonotic_web.setScrollbarFadingEnabled(false);
+
             license_web = itemView.findViewById(R.id.license_web);
+            WebSettings mWebSettings1 = license_web.getSettings();
+            mWebSettings1.setBuiltInZoomControls(true);
+            license_web.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+            license_web.setScrollbarFadingEnabled(false);
+
             imageButton.setOnClickListener(this);
             phonotic_web_layout = itemView.findViewById(R.id.phonotic_web_layout);
             phonotic_web_layout.setOnClickListener(this);
